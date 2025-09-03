@@ -5,6 +5,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -16,6 +17,11 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      <View className="flex-1 items-center justify-center bg-red-200">
+        <Text className="text-xl font-bold text-blue-500">
+          Welcome to Nativewind!
+        </Text>
+      </View>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
