@@ -2,14 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Alert,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -54,7 +54,7 @@ export default function RegisterScreen() {
     setTimeout(() => {
       setIsLoading(false);
       Alert.alert('注册成功', '欢迎加入我们！', [
-        { text: '确定', onPress: () => router.back() }
+        { text: '确定', onPress: () => router.push('/') }
       ]);
     }, 1500);
   };
@@ -75,7 +75,7 @@ export default function RegisterScreen() {
             <TouchableOpacity onPress={() => router.back()} className="mr-3">
               <Ionicons name="arrow-back" size={24} color="#374151" />
             </TouchableOpacity>
-            <Text className="text-lg font-semibold text-gray-800">注册</Text>
+            {/* <Text className="text-lg font-semibold text-gray-800">注册</Text> */}
           </View>
 
           <View className="px-6 pt-8">
